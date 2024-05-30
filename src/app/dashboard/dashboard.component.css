@@ -1,0 +1,39 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.left{
+    width: 20%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.right{
+    width: 80%;
+    height: 100%;
+    background-color: lightblue;
+}
+button{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    width: 80%;
+    border: 0;
+    box-shadow: 0px 0px 5px gray;
+    cursor: pointer;
+    margin-top: 30px;
+}
+h3{
+    margin: 0;
+    padding: 10px;
+}
+h3:hover{
+    cursor: pointer;
+    background-color: lightgray;
+    color: black;
+    /* border: 1px solid black; */
+    box-shadow: 0px 0px 5px white;
+}
