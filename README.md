@@ -135,3 +135,41 @@ Git:
         git push
 
         
+
+    Directives:  Useful to alter the DOM.
+    ===========
+
+        3 types:
+        --------
+            1) Stuctural Directives
+            2) Attribute Directives
+            3) Component Directives
+
+        1) Structural Directives: Alters the DOM structure
+        -------------------------
+
+            *ngFor: iteratively add new elements to DOM.
+            -------
+
+                <tr *ngFor="let user of users; let i=index">
+
+            *ngIf: Conditionally show or hide element in DOM.
+            ------
+
+                <h1 *ngIf="CONDITION">
+
+        2) Attrivute Directives: Alters attribute value dynamically.
+        ------------------------ 
+
+            [ngStyle]:
+            ----------
+                <td [ngStyle]="{ 'color':  CONDITION ? 'red' : 'blue' }"
+
+            [ngClass]:
+            ----------
+                <td [ngClass]="{ 'class1': CONDITION, 'class2':CONDITION }">
+
+        3) Component Ditectives: Add new elements to the DOM.
+        ------------------------
+
+            ***) In angular directives are superset, components are subset.

@@ -1,0 +1,40 @@
+<h1 *ngIf="true">Hello Directives!!!</h1>
+
+<p>directives works!</p>
+
+<p *ngFor="let age of ages">
+    My age is {{age}}
+</p>
+
+<p *ngFor="let state of states; let i=index">
+    State {{i+1}} name is {{state}}
+</p>
+
+<ol type="I">
+    <li *ngFor="let state of states">{{state}}</li>
+</ol>
+
+<select name="" id="">
+    <option *ngFor="let state of states">{{state}}</option>
+</select>
+
+<p *ngFor="let product of products">
+    The {{product.name}} price is {{product.price}} and rating is {{product.rating}}.
+</p>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td [ngClass]="{ 'red': product.price<=1000, 'blue': product.price>1000&&product.price<=5000, 'green': product.price>5000}">{{product.price}}</td>
+            <td [ngStyle]="{ 'color': product.rating>3?'green':'red' }">{{product.rating}}</td>
+        </tr>
+    </tbody>
+</table>
