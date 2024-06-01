@@ -12,7 +12,8 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { DirectivesComponent } from './directives/directives.component';
-
+import { EventComponent } from './event/event.component';
+import { StudentsComponent } from './students/students.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,8 @@ import { DirectivesComponent } from './directives/directives.component';
     DataBindingComponent,
     CalculatorComponent,
     DirectivesComponent,
+    EventComponent,
+    StudentsComponent
   ],
   imports: [
     BrowserModule,

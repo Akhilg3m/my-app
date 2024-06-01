@@ -117,7 +117,6 @@ Routing:
 
 Git:
 ----
-
     1) Link laptop and website
 
         git config --global user.name 'XXXXX'
@@ -133,6 +132,10 @@ Git:
         git add .
         git commit -m "XXXXX"
         git push
+
+    git add .                      changes->stagedchanges
+    git commit -m "XXXXXXX"        staged change 0
+    git push                       100% upload and check in website
 
         
 
@@ -173,3 +176,6 @@ Git:
         ------------------------
 
             ***) In angular directives are superset, components are subset.
+
+
+

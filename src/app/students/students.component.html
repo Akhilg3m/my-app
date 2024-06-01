@@ -1,0 +1,60 @@
+<div class="parent">
+
+    <div class="child">
+
+        <!-- <label for="">Company:</label>
+        <select [(ngModel)]="company">
+            <option>select company</option>
+            <option>honda</option>
+            <option>toyota</option>
+            <option>audi</option>
+        </select>
+
+        <h1 *ngIf="company=='honda'">Honda car image</h1>
+        <h1 *ngIf="company=='toyota'">toyota car image</h1>
+        <h1 *ngIf="company=='audi'">audi car image</h1> -->
+
+
+        <h1>Student Registration</h1>
+        <label for="">Name:</label>
+        <input type="text" [(ngModel)]="name">
+        <br>
+        <label for="">Marks:</label>
+        <input type="text" [(ngModel)]="marks">
+        <br>
+        <label for="">Fee:</label>
+        <input type="text" [(ngModel)]="fee">
+        <br>
+        <button (click)="register()">Register</button>
+        <br><br>
+
+        <h1>All Students</h1>
+        <button (click)="total()">Pending Fee</button>
+        <button (click)="lowToHigh()">Marks low to high</button>
+        <button (click)="salutation()">Salutation</button>
+        <button>Marks high to low</button>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Marks</th>
+                    <th>Fee</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of students; let i=index">
+                    <td>{{student.name}}</td>
+                    <td>{{student.marks}}</td>
+                    <td>{{student.fee}}</td>
+                    <td>
+                        <button (click)="delete(i)">delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    
+</div>
