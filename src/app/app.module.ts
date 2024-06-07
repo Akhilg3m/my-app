@@ -9,11 +9,17 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HomeComponent } from './home/home.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EventComponent } from './event/event.component';
 import { StudentsComponent } from './students/students.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { BalancePipe } from './balance.pipe';
+import { ProductsComponent } from './products/products.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,12 +32,19 @@ import { StudentsComponent } from './students/students.component';
     CalculatorComponent,
     DirectivesComponent,
     EventComponent,
-    StudentsComponent
+    StudentsComponent,
+    PipesComponent,
+    BalancePipe,
+    ProductsComponent,
+    VehiclesComponent,
+    CreateVehicleComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

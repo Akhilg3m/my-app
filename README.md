@@ -179,3 +179,165 @@ Git:
 
 
 
+    Pipes:
+    ------
+      Useful to transform data from one format to another format.
+
+      ***) It won't change the variable value
+           
+      Ex:   {{ name | uppercase }}
+                     lowercase
+
+            {{ user | json }}
+
+            {{ date | date:'yyyy-MM-dd' }}
+
+    
+     Custom Pipe:
+     ------------
+
+        1) Create:
+        ---------
+
+            ng g p balance
+
+        2) Implement:
+        -------------
+
+            return "Rs." + value + "/-";
+
+        3) Apply:
+        ---------
+
+            {{ amount | balance }}
+
+
+
+    Synchronous Execution: Line by Line execution
+    ---------------------
+
+    Asynchronous Execution: Parallel exeecution
+    -----------------------
+
+    RXJS:
+    -----
+
+        Responsible for all Async operators
+
+        3 features
+
+            1. promise
+            2. obserable
+            3. subject
+
+                        PROMISE                  OBSERVABLE
+                        -------                 -------------
+
+            1. single callback                 multiple callbacks
+
+            2. Data in single chunk            stream of data
+
+            3. We can not stop in b/w          we can stop in between using 
+                                               unsubscribe method.
+
+            4. less rxjs operator support      more support
+
+
+                        OBSERVABLE                 SUBJECT
+                        ----------                 -------
+
+            1.  unicasting                        multicasting
+
+            2.  maintains state                   does not maintain state
+
+
+    HTTP(API Integration):
+    ---------------------
+
+
+        DataFlow:
+        ---------
+
+
+
+        Implementation:
+        ---------------
+        0) create vehicle component and service.
+
+        1) import HTTPClientModule
+
+            import {HTTPClientModule} from @angular/common/http;
+
+        2) Inject HttpClient service in vehicle service
+
+        3) Do api call with get method
+
+        4) Inject vehicle service in vehicle component
+
+        5) Subscrbe to observable in component ts
+
+        6) display data in html
+
+
+
+
+    All Possible API Calls:
+    -----------------------
+
+    1)  all             get            get( url )
+
+    2)  specific        get            get( url/id )
+
+    3)  filter          get            get( url?filter=red )
+
+    4)  pagination      get            get( url?limit=10&page=1 )
+
+    5)  sorting         get            get( url?sortBy=color&order=asc )
+                                                                   desc
+
+    6)  create          post           post( url, data )
+
+    7)  update          put            put( url/id, data )
+
+
+    8)  delete          delete         delete( url/id )
+
+
+
+    Angular Forms:
+    --------------
+
+        2 types of forms
+
+            1) template driven forms
+            2) reactive forms
+
+        ***) reactive forms provides more features like
+                form arrays
+                nested form groups
+                dynamic forms
+                custom validations
+                dynamically adding and removing controls
+                different state like touched, dirty, invalid etc...
+
+
+        Reactive Forms Concepts:
+        ------------------------
+        1) FormGroup
+        2) Nested FormGroup
+        3) Form Array
+        4) Dynamic Forms
+        5) Form Validations
+        6) Custom Validators
+
+             
+        Implementation:
+        ---------------
+        1) import ReactiveFormsModule
+        2) Create FormGroup in class.
+        3) Create form in template.
+        4) Map the inputs with form controls.
+        5) console form value and check.
+
+
+        
