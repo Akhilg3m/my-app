@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VehicleService } from '../vehicle.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-vehicles',
@@ -22,7 +23,7 @@ export class VehiclesComponent {
     "order":''
   }
 
-  constructor(private _vehicleService:VehicleService) {
+  constructor(private _vehicleService:VehicleService, private _router:Router) {
 
     _vehicleService.getVehicles().subscribe(
       (data:any)=>{
@@ -56,7 +57,7 @@ export class VehiclesComponent {
       }
     )
   }
-
+  
   sort(){
 
     this._vehicleService.getSortedVehicles(this.column, this.order).subscribe(
@@ -84,6 +85,14 @@ export class VehiclesComponent {
         alert("Internal server error");
       }
     )
+  }
+
+  view(id:string){
+    this._router.navigateByUrl('/dashboard/vehicle-details/'+id);
+  }
+
+  edit(id:string){
+    
   }
 
 }

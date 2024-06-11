@@ -21,6 +21,7 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
     VehiclesComponent,
     CreateVehicleComponent,
     CreateUserComponent,
+    VehicleDetailsComponent,
   ],
   imports: [
     BrowserModule,
