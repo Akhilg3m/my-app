@@ -340,4 +340,25 @@ Git:
         5) console form value and check.
 
 
+        FormValidations:
+        ----------------
+
+        TS:
+        ---
+
+            age: new FormControl(null, [Validators.requried, Validatros.min(0)]);
+
+
+        HTML:
+        -----
+
+            <div *ngIf="CONTROL.touched && CONTROL.invalid">
+
+                <p *ngIf="CONTROL?.errors?.['required']"> XXXX </p>
+
+            </div>
+
+        FormGroup:        userForm.get('name')
+        NestedFormGroup:  userForm.get('address')?.get('pincode')
+        FormArray:        cardsFormArray.controls[i]?.get('cvv')
         

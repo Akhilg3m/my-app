@@ -15,6 +15,7 @@ import { ProductsComponent } from './products/products.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { AuthenticationGuard } from './authentication.guard';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 const routes: Routes = [
   {path:'login', component: LoginComponent},
@@ -30,6 +31,7 @@ const routes: Routes = [
     {path:'products', component: ProductsComponent},
     {path:'vehicles', component: VehiclesComponent},
     {path:'create-vehicle', component: CreateVehicleComponent},
+    {path:'create-user', component: CreateUserComponent}
   ]},
   {path:'', component: LoginComponent},
   {path:'**', component: PagenotfoundComponent}

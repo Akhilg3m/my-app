@@ -20,6 +20,7 @@ import { ProductsComponent } from './products/products.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
     ProductsComponent,
     VehiclesComponent,
     CreateVehicleComponent,
+    CreateUserComponent,
   ],
   imports: [
     BrowserModule,
