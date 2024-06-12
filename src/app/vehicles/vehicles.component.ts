@@ -70,7 +70,7 @@ export class VehiclesComponent {
     )
 
   }
-  
+
   getData(){
     
   }
@@ -92,7 +92,7 @@ export class VehiclesComponent {
   }
 
   edit(id:string){
-    
+    this._router.navigateByUrl('/dashboard/edit-vehicle/'+id);
   }
 
 }

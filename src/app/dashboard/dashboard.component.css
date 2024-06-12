@@ -9,6 +9,8 @@
     background-color: black;
     color: white;
     text-align: center;
+    overflow: auto;
+    padding-bottom: 80px;
 }
 .right{
     width: 80%;
