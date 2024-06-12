@@ -363,5 +363,85 @@ Git:
         FormArray:        cardsFormArray.controls[i]?.get('cvv')
 
 
+        COMMUNICATIONS:
+        ===============
+
+        1) Page Communication
+        2) Component Communication
+        3) Module Communication
+
+
+        1) Page Communication:
+        ----------------------
+
+            1) create param in path
+            2) set value to param from table component
+            3) get value from details component using activated route service
+
+            applications: view/details pages, edit
+
+        2) Component Communication:
+        ---------------------------
+
+            1) Parent to child
+            2) Child to parent
+            3) Sibling communication
+
+
+
+            parent.html
+            -----------
+
+
+                <app-child [ac]="10" (bEvent)="catch($event)">
+
+
+            child.ts
+            --------
+
+                @Input() public ac:string = "";
+
+
+                @Output() public bEvent:EventEmitter<any> = new EventEmitter();
+                send(){
+                    this.bEvent.emit(20);
+                }
+
+
+
+            Sibling Communication:
+            ======================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
         
+
+
+
+        1) Rating component
+
+            <app-rating [rating]="3" (ratingChange)="function()"></app-rating>
+
+        2) Textarea
+
+            <app-textarea [max]="100 "></app-textarea>
+
+        3) Likes
+
+            <app-likes [sad]="20" [angry]="30"></app-lilkes>
