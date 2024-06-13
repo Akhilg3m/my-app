@@ -24,6 +24,9 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { NavComponent } from './nav/nav.component';
+import { CartComponent } from './cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +49,9 @@ import { ChildComponent } from './child/child.component';
     VehicleDetailsComponent,
     ParentComponent,
     ChildComponent,
+    ProductListComponent,
+    NavComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
