@@ -414,10 +414,41 @@ Git:
 
 
 
+        3) MODULE COMMUINICATION:
+        -------------------------
 
+            1. Eager Loading
+            2. Lazy Loading
+            3. Pre Loading
 
+            1. Eager Loading:
+            ----------------
 
+                a. create feature module
+                b. import feature module in app module
 
+                
+                => Cause initial load delay
+
+            2. Lazy Loading:
+            ----------------
+
+                a. create feature module with routing module
+                    ng g m payments --routing=true
+                b. configure lazy loading route in app-routing.module
+                    {
+                        path: 'payments',
+                        loadChildren: .........
+                    }
+
+            3. Pre Loading: 
+            --------------- 
+                Lazy loading modules will be donwloaded 
+                immediatly after 
+                eager loading modules have finished downloading.
+
+                app-routing.module.ts => 
+                    RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})
 
 
 

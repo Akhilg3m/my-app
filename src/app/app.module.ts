@@ -27,6 +27,8 @@ import { ChildComponent } from './child/child.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
+import { AboutUsModule } from './about-us/about-us.module';
+import { PaymentsModule } from './payments/payments.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +60,8 @@ import { CartComponent } from './cart/cart.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutUsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

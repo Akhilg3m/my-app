@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
@@ -21,6 +21,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
+import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
 
 const routes: Routes = [
   {path:'login', component: LoginComponent},
@@ -43,13 +44,18 @@ const routes: Routes = [
     {path:'product-list', component: ProductListComponent},
     {path:'nav', component: NavComponent},
     {path:'cart', component: CartComponent},
+    {path:'about-company', component:AboutCompanyComponent},
+    {
+      path: 'payments',
+      loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
+    }
   ]},
   {path:'', component: LoginComponent},
   {path:'**', component: PagenotfoundComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
